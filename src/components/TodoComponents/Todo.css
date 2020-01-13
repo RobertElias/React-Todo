@@ -4,11 +4,11 @@ body {
   width: 100%;
   height: 100%;
   margin: 0;
-  padding: 0;
+  padding: 0;color: rgba(97, 218, 251, 0.76);
 }
 
 body {
-  background-color: #2d2d37;
+    background: #2D2D2D;
 }
 
 h1,
@@ -30,31 +30,44 @@ span {
   padding: 0 36px;
   max-width: 665px;
   margin: 0 auto;
+  align-items: center;
+  
 }
 
 .header {
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
 }
+
 h1 {
   text-align: left;
 }
 
-.shopping-list {
+.todo-list {
+  border: 1px solid green;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: space-between;
   width: 100%;
   margin: 0 auto;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+
 }
 .item {
-  background-color: #e64944;
+ 
+  background-color: #61DAFB;
   width: 45%;
-  text-align: left;
-  margin: 4px 0;
+  text-align: center;
+  margin: 20px 0 15px 0;  
   padding-left: 8px;
   cursor: pointer;
+  align-items: center;
 }
 
 .item.completed {
@@ -62,27 +75,28 @@ h1 {
   text-decoration: line-through;
 }
 form {
-  width: 50%;
+  width: 46.5%;
   display: flex;
   justify-content: flex-end;
 }
 form > input {
-  background-color: #2d2d37;
+  background-color: #9c9ca3;
   border: 0;
-  padding: 6px 0;
+  padding: 3px;
   font-size: 1rem;
   width: 240px;
   outline: 0;
   color: white;
-  border-bottom: 1px solid #e64944;
+  border-bottom: 1px solid #8d7c7b;
   margin-right: 8px;
 }
 
 button {
-  background-color: #e64944;
+  background-color: #61DAFB;
   border: 1px solid #e64944;
   color: white;
   font-size: 16px;
+  width: 45%;
   padding: 6px 14px;
 }
 
@@ -93,4 +107,11 @@ input::placeholder {
 
 .clear-btn {
   margin-top: 16px;
+  color: gold;
 }
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  }

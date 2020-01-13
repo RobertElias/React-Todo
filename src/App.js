@@ -63,15 +63,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-          <div className="header">
+        <div className="header">
         <h2>Welcome to your Todo App!</h2>
         <TodoForm addItem={this.addItem} />
-      </div>
-      <TodoList
+        <TodoList
           todo={this.state.todoList}
           toggleItem={this.toggleItem}
           clearList={this.clearList}
         />
+      </div>
+      
       </div>
      
     );
