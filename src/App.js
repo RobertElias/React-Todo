@@ -42,6 +42,17 @@ class App extends Component {
     });
   };
 
+  addItem = itemName => {
+    const newItem = {
+      name: itemName,
+      id: Date.now(),
+      purchased: false
+    };
+    this.setState({
+      todoList: [...this.state.todoList, newItem]
+    });
+  };
+
   // design `App` to be the parent component of your application.
   // this component is going to take care of state, and any change handlers you need to work with your state
   render() {
@@ -49,7 +60,7 @@ class App extends Component {
       <div className="App">
           <div className="header">
         <h2>Welcome to your Todo App!</h2>
-        {/* TodoForm component */}
+        {/* <ToDoForm addItem={this.addItem} /> */}
       </div>
       {/* TodoList component */}
       </div>
